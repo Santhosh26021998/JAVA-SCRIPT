@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Tasktoggle</title>
+    </head>
+    <body id="b1">
+        <label>FirstName</label>
+        <input type="text" id="f1" placeholder="firstname"/><br><br>
+        <label>Lastname</label>
+        <input type="text" id="l1" placeholder="lastname"/><br><br>
+        <label>Age</label>
+        <input type="number" id="c1" onkeydown="down()"  placeholder="Age"/><br><br>
+        <input type="hidden" id="h1"/>
+        <input type="button"  onclick="add()"  id="b1" value="ADD"/>
+        
+
+        <script>
+           var f=document.getElementById("f1").value;
+           var l=document.getElementById("l1").value;
+           var b=document.getElementById("b1"); 
+           b.style.textAlign="center";
+           function add()
+           {
+      
+            let c=document.getElementById("c1").value;
+            let h=document.getElementById("h1").value;
+            c=parseInt(c);
+    
+           if(h==0)
+           {
+            if(c<18)
+            {
+             alert("Not Eligible");
+             let c=document.getElementById("c1").readOnly="true";
+             let h=document.getElementById("h1").value=1;
+            }
+           else
+            {
+             alert("Eligible");
+             let c=document.getElementById("c1").readOnly="true";
+             let h=document.getElementById("h1").value=1;
+            }
+          }
+          else
+          {
+                alert("DONT CHANGE");
+        }           
+           }
+           
+         
+          
+          
+        </script>
+    </body>
+</html>
